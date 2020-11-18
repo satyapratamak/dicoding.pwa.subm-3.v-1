@@ -113,6 +113,8 @@ class Teams extends API{
         const teamsHtml = document.getElementById("teams");
         teamsHtml.innerHTML = '';
         teams.forEach(data => {
+
+            //const urlImage = data.crestUrl.replace(/^http:\/\//i, 'https://');
            
             let faHeart = 'fa-heart-o';
             let isSaved = false;
@@ -157,12 +159,12 @@ class Teams extends API{
             this.fav.favTeam(data.id, data);
         });
 
-        const images = document.querySelectorAll('img');
+        /*const images = document.querySelectorAll('img');
         images.forEach((img) => {
             img.addEventListener('error', () => {
                 img.src = "./assets/img/logo.png"
             })
-        });
+        });*/
     }
     
     getSavedTeams() {
@@ -182,7 +184,7 @@ class Teams extends API{
         teamsHtml.innerHTML = '';
         if(teams.length != 0) {
             teams.forEach(data => {
-                
+                //const urlImage = data.crestUrl.replace(/^http:\/\//i, 'https://');
                 teamsHtml.innerHTML += `
                     <div class="col s12 m6">
                         <div class="card horizontal">
@@ -218,12 +220,12 @@ class Teams extends API{
             `;
         }
 
-        const images = document.querySelectorAll('img');
+        /*const images = document.querySelectorAll('img');
         images.forEach((img) => {
             img.addEventListener('error', () => {
                 img.src = "./assets/img/logo.png"
             })
-        });
+        });*/
     }
 
     
